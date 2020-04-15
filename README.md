@@ -19,3 +19,17 @@ $logShow=true
 東西南北を回転させる。カメラ移動。
 
 ```
+```
+var map ={}; //object for multiple key presses
+scene.actionManager = new BABYLON.ActionManager(scene);
+scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyDownTrigger, function (evt) {								
+map[evt.sourceEvent.key] = evt.sourceEvent.type == "keydown";
+}));
+
+scene.registerAfterRender(function() {	
+if(map[" "]) {//if space key
+}
+return scene
+}
+
+```
